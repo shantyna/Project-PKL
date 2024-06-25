@@ -1,6 +1,6 @@
 
 <li class="pc-item">
-    <a href="/application/calendar" class="pc-link">
+    <a href="{{ url('lihat_pengirim') }}" class="pc-link">
         <span class="pc-micon">
             <i class="ph-duotone ph-identification-card"></i>
         </span>
@@ -8,7 +8,7 @@
     </a>
 </li>
 <li class="pc-item">
-    <a href="{{ url('data_pegawai') }}" class="pc-link">
+    <a href="{{ url('lihat_pegawai') }}" class="pc-link">
         <span class="pc-micon">
             <i class="ph-duotone ph-newspaper"></i>
         </span>

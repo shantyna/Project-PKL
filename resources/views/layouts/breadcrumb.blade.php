@@ -4,9 +4,8 @@
         <div class="row align-items-center">
             <div class="col-md-12">
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="/dashboard">Home</a></li>
-                    <li class="breadcrumb-item"><a href="javascript: void(0)">@yield('breadcrumb-item')</a></li>
-                    <li class="breadcrumb-item" aria-current="page">@yield('breadcrumb-item-active')</li>
+                    <li class="breadcrumb-item"><a href="/dashboard">Dashboard Utama</a></li>
+                    <li class="breadcrumb-item"><a href="/application/calendar">Tabel</a></li>
                 </ul>
             </div>
             <div class="col-md-12">

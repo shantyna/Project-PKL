@@ -14,7 +14,7 @@
 <meta name="author" content="phoenixcoded" />
 
     <!-- [Favicon] icon -->
-    <link rel="icon" href="{{ URL::asset('image/kemenkumham.png') }}"   type="image/png">
+    <link rel="icon" href="{{ URL::asset('image/kemenkumham.png') }}" type="image/png">
 
     @yield('css')
 
@@ -36,6 +36,48 @@
             @endif
             <!-- [ Main Content ] start -->
             @yield('content')
+            <h1>Kiriman Agenda</h1>
+
+            <div class="row">
+          <!-- DOM/Jquery table start -->
+          <div class="col-sm-12">
+            <div class="card">
+              
+              <div class="card-body">
+                <div class="dt-responsive">
+                  <table id="dom-jqry" class="table table-striped table-bordered nowrap">
+                    <thead>
+                      <tr>
+                        <th>No</th>
+                        <th>Nama</th>
+                        <th>Jenis Kegiatan</th>
+                        <th>Tanggal Pelaksanaan</th>
+                        <th>Status</th>
+                        <th>Aksi</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    @php $nomor = 1; @endphp
+                      <tr>
+                         <td>{{ $nomor++ }}</td>
+                        <td>Nur Aina Susanti</td>
+                        <td>Pelantikan</td>
+                        <td>19-04-2003</td>
+                        <td><button type="button" class="btn btn-light-danger">Tertunda</button></td>
+                        <td>
+                        <button type="button"  class="btn btn-light-primary">Setuju</button>
+                        <button type="button"  class="btn btn-light-secondary">Tolak</button>
+                        <button type="button"  class="btn btn-light-danger">Hapus</button>
+                        </td>
+                      </tr>
+                     
+                    </tbody>
+                   
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
             <!-- [ Main Content ] end -->
         </div>
     </div>

@@ -15,89 +15,13 @@
                         <i class="ti ti-menu-2"></i>
                     </a>
                 </li>
-                <li class="dropdown pc-h-item d-inline-flex d-md-none">
-                    <a class="pc-head-link dropdown-toggle arrow-none m-0" data-bs-toggle="dropdown" href="#"
-                        role="button" aria-haspopup="false" aria-expanded="false">
-                        <i class="ph-duotone ph-magnifying-glass"></i>
-                    </a>
-                    <div class="dropdown-menu pc-h-dropdown drp-search">
-                        <form class="px-3">
-                            <div class="form-group mb-0 d-flex align-items-center">
-                                <input type="search" class="form-control border-0 shadow-none"
-                                    placeholder="Search..." />
-                                <button class="btn btn-light-secondary btn-search">Search</button>
-                            </div>
-                        </form>
-                    </div>
-                </li>
-                <li class="pc-h-item d-none d-md-inline-flex">
-                    <form class="form-search">
-                        <i class="ph-duotone ph-magnifying-glass icon-search"></i>
-                        <input type="search" class="form-control" placeholder="Search..." />
-                        <button class="btn btn-search" style="padding: 0"><kbd>ctrl+k</kbd></button>
-                    </form>
-                </li>
+               
             </ul>
         </div>
         <!-- [Mobile Media Block end] -->
-        <div class="ms-auto">
-            <ul class="list-unstyled">
-                <li class="dropdown pc-h-item">
-                    <a class="pc-head-link dropdown-toggle arrow-none me-0" data-bs-toggle="dropdown" href="#"
-                        role="button" aria-haspopup="false" aria-expanded="false">
-                        <i class="ph-duotone ph-sun-dim"></i>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-end pc-h-dropdown">
-                        <a href="#!" class="dropdown-item" onclick="layout_change('dark')">
-                            <i class="ph-duotone ph-moon"></i>
-                            <span>Dark</span>
-                        </a>
-                        <a href="#!" class="dropdown-item" onclick="layout_change('light')">
-                            <i class="ph-duotone ph-sun-dim"></i>
-                            <span>Light</span>
-                        </a>
-                        <a href="#!" class="dropdown-item" onclick="layout_change_default()">
-                            <i class="ph-duotone ph-cpu"></i>
-                            <span>Default</span>
-                        </a>
-                    </div>
-                </li>
-                <li class="pc-h-item">
-                    <a class="pc-head-link pct-c-btn" href="#" data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvas_pc_layout">
-                        <i class="ph-duotone ph-gear-six"></i>
-                    </a>
-                </li>
-                <li class="dropdown pc-h-item">
-                    <a class="pc-head-link dropdown-toggle arrow-none me-0" data-bs-toggle="dropdown" href="#"
-                        role="button" aria-haspopup="false" aria-expanded="false">
-                        <i class="ph-duotone ph-diamonds-four"></i>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-end pc-h-dropdown">
-                        <a href="#!" class="dropdown-item">
-                            <i class="ph-duotone ph-user"></i>
-                            <span>My Account</span>
-                        </a>
-                        <a href="#!" class="dropdown-item">
-                            <i class="ph-duotone ph-gear"></i>
-                            <span>Settings</span>
-                        </a>
-                        <a href="#!" class="dropdown-item">
-                            <i class="ph-duotone ph-lifebuoy"></i>
-                            <span>Support</span>
-                        </a>
-                        <a href="#!" class="dropdown-item">
-                            <i class="ph-duotone ph-lock-key"></i>
-                            <span>Lock Screen</span>
-                        </a>
-                        <a href="{{ route('logout') }}"
-                        onclick="event.preventDefault();
-                                  document.getElementById('logout-form').submit();" class="dropdown-item">
-                            <i class="ph-duotone ph-power"></i>
-                            <span>Logout</span>
-                        </a>
-                    </div>
-                </li>
+         <div class="mt-3">
+            <button type="button" style="font-size: 18px;" class="btn btn-light-primary">Notifikasi</button>
+         </div>
                 <li class="dropdown pc-h-item">
                     <a class="pc-head-link dropdown-toggle arrow-none me-0" data-bs-toggle="dropdown" href="#"
                         role="button" aria-haspopup="false" aria-expanded="false">

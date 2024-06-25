@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>@yield('title') | Light Able Laravel 11 Admin & Dashboard Template</title>
+    <title>@yield('title')  KEMENKUMHAM</title>
     <!-- [Meta] -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
@@ -14,7 +14,7 @@
 <meta name="author" content="phoenixcoded" />
 
     <!-- [Favicon] icon -->
-    <link rel="icon" href="{{ URL::asset('build/images/favicon.svg') }}" type="image/x-icon">
+    <link rel="icon" href="{{ URL::asset('image/kemenkumham.png') }}" type="image/png">
 
     @yield('css')
 
@@ -36,6 +36,43 @@
             @endif
             <!-- [ Main Content ] start -->
             @yield('content')
+
+            <div class="row">
+          <!-- DOM/Jquery table start -->
+          <div class="col-sm-12">
+            <div class="card">
+                
+              <div class="card-body">
+                <div class="dt-responsive">
+                  <table id="dom-jqry" class="table table-striped table-bordered nowrap">
+                    <thead>
+                      <tr>
+                        <th>No</th>
+                        <th>NIP</th>
+                        <th>Nama Pegawai</th>
+                        <th>Jabatan</th>
+                        <th>Aksi</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    @php $nomor = 1; @endphp
+                      <tr>
+                         <td>{{ $nomor++ }}</td>
+                        <td>2155201110028</td>
+                        <td>Nur Aina Susanti</td>
+                        <td>Full-stack Developer</td>
+                        <td>
+                        <button type="button"  class="btn btn-light-danger">Hapus</button>
+                        </td>
+                      </tr>
+                     
+                    </tbody>
+                   
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
             <!-- [ Main Content ] end -->
         </div>
     </div>
