@@ -122,7 +122,7 @@
                                     <p class="text-span">Today</p>
                                     <div class="d-flex">
                                         <div class="flex-shrink-0">
-                                            <img src="{{ URL::asset('build/images/user/avatar-2.jpg') }}"
+                                            <img src="{{ URL::asset('build/images/user/avatar-3.jpg') }}"
                                                 alt="user-image" class="user-avtar avtar avtar-s" />
                                         </div>
                                         <div class="flex-grow-1 ms-3">
@@ -221,7 +221,7 @@
                                 <li class="list-group-item">
                                     <div class="d-flex">
                                         <div class="flex-shrink-0">
-                                            <img src="{{ URL::asset('build/images/user/avatar-2.jpg') }}"
+                                            <img src="{{ URL::asset('build/images/user/avatar-3.jpg') }}"
                                                 alt="user-image" class="user-avtar avtar avtar-s" />
                                         </div>
                                         <div class="flex-grow-1 ms-3">
@@ -285,7 +285,7 @@
                 <li class="dropdown pc-h-item header-user-profile">
                     <a class="pc-head-link dropdown-toggle arrow-none me-0" data-bs-toggle="dropdown" href="#"
                         role="button" aria-haspopup="false" data-bs-auto-close="outside" aria-expanded="false">
-                        <img src="{{ URL::asset('build/images/user/avatar-2.jpg') }}" alt="user-image"
+                        <img src="{{ URL::asset('build/images/user/avatar-3.jpg') }}" alt="user-image"
                             class="user-avtar">
                     </a>
                     <div class="dropdown-menu dropdown-user-profile dropdown-menu-end pc-h-dropdown">
@@ -299,7 +299,7 @@
                                     <li class="list-group-item">
                                         <div class="d-flex align-items-center">
                                             <div class="flex-shrink-0">
-                                                <img src="{{ URL::asset('build/images/user/avatar-2.jpg') }}"
+                                                <img src="{{ URL::asset('build/images/user/avatar-3.jpg') }}"
                                                     alt="user-image" class="wid-50 rounded-circle" />
                                             </div>
                                             <div class="flex-grow-1 mx-3">
@@ -325,7 +325,7 @@
                                             <div class="user-group">
                                                 <img src="{{ URL::asset('build/images/user/avatar-1.jpg') }}"
                                                     alt="user-image" class="avtar" />
-                                                <img src="{{ URL::asset('build/images/user/avatar-2.jpg') }}"
+                                                <img src="{{ URL::asset('build/images/user/avatar-3.jpg') }}"
                                                     alt="user-image" class="avtar" />
                                                 <img src="{{ URL::asset('build/images/user/avatar-3.jpg') }}"
                                                     alt="user-image" class="avtar" />

@@ -1,9 +1,9 @@
 @extends('layouts.layout-2')
 
-@section('title', 'Layout 2')
+@section('title', 'Layout 2faweoifjaweoijo')
 @section('breadcrumb-item', 'Layout')
 
-@section('breadcrumb-item-active', 'Layout 2')
+@section('breadcrumb-item-active', 'Layout aefawe2')
 
 @section('css')
 @endsection
@@ -15,7 +15,7 @@
           <div class="col-sm-12">
             <div class="card">
               <div class="card-body">
-                <h5>Brand Color</h5>
+                <h5>Brandzfvzew Color</h5>
                 <small>set background utility class in <code>.m-header</code> in sidebar</small>
                 <div class="row g-3 mt-3">
                   <div class="col-auto">
