@@ -268,19 +268,12 @@ if (pc_event_edit) {
     var e_date_start = calendevent.start === null ? '' : dateformat(calendevent.start);
     var e_date_end = calendevent.end === null ? '' : " <i class='text-sm'>to</i> " + dateformat(calendevent.end);
     e_date_end = calendevent.end === null ? '' : e_date_end;
-    var e_venue = calendevent.extendedProps.venue === undefined ? '' : calendevent.extendedProps.venue;
-    var e_organizer = calendevent.extendedProps.organizer === undefined ? '' : calendevent.extendedProps.organizer;
-    var e_equipment = calendevent.extendedProps.equipment === undefined ? '' : calendevent.extendedProps.equipment;
-    var e_documents = calendevent.extendedProps.documents === undefined ? '' : calendevent.extendedProps.documents;
+    var e_venue = calendevent.extendedProps.description === undefined ? '' : calendevent.extendedProps.venue;
     var e_type = calendevent.classNames[0] === undefined ? '' : calendevent.classNames[0];
-
 
     document.getElementById('pc-e-title').value = e_title;
     document.getElementById('pc-e-venue').value = e_venue;
     document.getElementById('pc-e-description').value = e_desc;
-    document.getElementById('pc-e-organizer').value = e_organizer;
-    document.getElementById('pc-e-equipment').value = e_equipment;
-    document.getElementById('pc-e-documents').value = e_documents;
     document.getElementById('pc-e-type').value = e_type;
     var sdt = new Date(e_date_start);
     var edt = new Date(e_date_end);
