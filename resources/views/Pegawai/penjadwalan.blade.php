@@ -6,9 +6,6 @@
 @section('breadcrumb-item-active', 'Calendar')
 
 @section('css')
-    <!-- data tables css -->
-    <link rel="stylesheet" href="{{ URL::asset('build/css/plugins/datepicker-bs5.min.css') }}">
-    <link rel="stylesheet" href="{{ URL::asset('build/css/plugins/dataTables.bootstrap5.min.css') }}">
 @endsection
 
 @section('content')
@@ -29,12 +26,14 @@
 <div class="modal fade" id="calendar-modal" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
+
       <div class="modal-header">
         <h3 class="calendar-modal-title f-w-600 text-truncate">Modal title</h3>
         <a href="#" class="avtar avtar-s btn-link-danger btn-pc-default" data-bs-dismiss="modal">
           <i class="ti ti-x f-20"></i>
         </a>
       </div>
+
       <div class="modal-body">
         <div class="d-flex">
           <div class="flex-shrink-0">
@@ -47,6 +46,7 @@
             <p class="pc-event-title text-muted"></p>
           </div>
         </div>
+
         <div class="d-flex">
           <div class="flex-shrink-0">
             <div class="avtar avtar-xs bg-light-warning">
@@ -58,6 +58,7 @@
             <p class="pc-event-venue text-muted"></p>
           </div>
         </div>
+        
         <div class="d-flex">
           <div class="flex-shrink-0">
             <div class="avtar avtar-xs bg-light-danger">
@@ -69,6 +70,7 @@
             <p class="pc-event-date text-muted"></p>
           </div>
         </div>
+
         <div class="d-flex">
           <div class="flex-shrink-0">
             <div class="avtar avtar-xs bg-light-primary">
@@ -80,7 +82,9 @@
             <p class="pc-event-description text-muted"></p>
           </div>
         </div>
+
       </div>
+
       <div class="modal-footer justify-content-between">
         <ul class="list-inline me-auto mb-0">
           <li class="list-inline-item align-bottom">
@@ -98,23 +102,28 @@
           <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
+
     </div>
   </div>
 </div>
 
 <div class="offcanvas offcanvas-end cal-event-offcanvas" tabindex="-1" id="calendar-add_edit_event">
+  
   <div class="offcanvas-header">
-    <h3 class="f-w-600 text-truncate">Input Agenda</h3>
+    <h3 class="f-w-600 text-truncate">Add Events</h3>
     <a href="#" class="avtar avtar-s btn-link-danger btn-pc-default" data-bs-dismiss="offcanvas">
       <i class="ti ti-x f-20"></i>
     </a>
   </div>
+
   <div class="offcanvas-body">
     <form id="pc-form-event" novalidate>
+
       <div class="form-group">
         <label class="form-label">Nama Kegiatan</label>
         <input type="text   " class="form-control" id="pc-e-title" placeholder="Masukkan Nama Kegiatan" autofocus>
       </div>
+
       <div class="form-group">
         <label class="form-label">Jenis Kegiatan</label>
         <select class="form-select" id="pc-e-type">
@@ -123,30 +132,37 @@
           <option value="event-secondary">Tentatif</option>
         </select>
       </div>
+
       <div class="form-group m-0">
         <input type="hidden" class="form-control" id="pc-e-sdate">
         <input type="hidden" class="form-control" id="pc-e-edate">
       </div>
+
       <div class="form-group">
         <label class="form-label">Tanggal Pelaksanaan</label>
         <input type="text" class="form-control @error('tgl_survey') is-invalid @enderror" placeholder="isi tanggal" name="tgl_survey" id="pc-datepicker-1" value="{{ old('tgl_survey') }}">
       </div>
+
       <div class="form-group">
             <label class="form-label">Tempat Pelaksanaan</label>
             <input type="text" class="form-control" placeholder="Masukkan Tempat Pelaksanaan" id="pc-e-location">
         </div>
+
         <div class="form-group">
             <label class="form-label">Pelaksana Kegiatan</label>
             <input type="text" class="form-control" placeholder="Masukkan Pelaksana Kegiatan" id="pc-e-organizer">
         </div>
+
         <div class="form-group">
             <label class="form-label">Kelengkapan Pelaksanaan</label>
             <input type="text" class="form-control" placeholder="Masukkan Kelengkapan Pelaksanaan" id="pc-e-equipment">
         </div>
+
         <div class="form-group">
             <label class="form-label">Berkas Pelaksanaan</label>
             <input type="text" class="form-control" placeholder="Masukkan Berkas Pelaksanaan" id="pc-e-documents">
         </div>
+
         <div class="form-group">
             <label class="form-label">Catatan</label>
             <textarea class="form-control" placeholder="Masukkan Catatan" rows="6" id="pc-e-notes"></textarea>
