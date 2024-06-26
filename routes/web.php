@@ -14,7 +14,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/', [AdminController::class, 'dashboard'])->name('dashboard');
     Route::get('/dashboard/admin', [AdminController::class, 'index'])->name('admin.index');
     Route::get('/lihat_pengirim', [AdminController::class,'lihat_pengirim']);
-    Route::get('/hapus_pengirim/{id}', [AdminController::class,'hapus_pengirim']);
+    Route::get('/hapus_pengirim/{id}', [AdminController::class,'hapus_pengirim'])->name('hapus_pengirim');
     
     Route::get('/lihat_pegawai', [AdminController::class,'lihat_pegawai']);
     

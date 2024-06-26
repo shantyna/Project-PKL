@@ -28,7 +28,7 @@
     <div class="modal-content">
 
       <div class="modal-header">
-        <h3 class="calendar-modal-title f-w-600 text-truncate">Modal title</h3>
+        <h3 class="calendar-modal-title f-w-600 text-truncate">Nama Kegiatan</h3>
         <a href="#" class="avtar avtar-s btn-link-danger btn-pc-default" data-bs-dismiss="modal">
           <i class="ti ti-x f-20"></i>
         </a>
@@ -42,7 +42,55 @@
             </div>
           </div>
           <div class="flex-grow-1 ms-3">
-            <h5 class="mb-1"><b>Title</b></h5>
+            <h5 class="mb-1"><b>Nama Kegiatan</b></h5>
+            <p class="pc-event-title text-muted"></p>
+          </div>
+        </div>
+
+        <div class="d-flex">
+          <div class="flex-shrink-0">
+            <div class="avtar avtar-xs bg-light-secondary">
+              <i class="ti ti-heading f-20"></i>
+            </div>
+          </div>
+          <div class="flex-grow-1 ms-3">
+            <h5 class="mb-1"><b>Jenis Kegiatan</b></h5>
+            <p class="pc-event-title text-muted"></p>
+          </div>
+        </div>
+
+        <div class="d-flex">
+          <div class="flex-shrink-0">
+            <div class="avtar avtar-xs bg-light-secondary">
+              <i class="ti ti-heading f-20"></i>
+            </div>
+          </div>
+          <div class="flex-grow-1 ms-3">
+            <h5 class="mb-1"><b>Tanggal Pelaksanaan</b></h5>
+            <p class="pc-event-title text-muted"></p>
+          </div>
+        </div>
+
+        <div class="d-flex">
+          <div class="flex-shrink-0">
+            <div class="avtar avtar-xs bg-light-secondary">
+              <i class="ti ti-heading f-20"></i>
+            </div>
+          </div>
+          <div class="flex-grow-1 ms-3">
+            <h5 class="mb-1"><b>Tempat Pelaksanaan</b></h5>
+            <p class="pc-event-title text-muted"></p>
+          </div>
+        </div>
+
+        <div class="d-flex">
+          <div class="flex-shrink-0">
+            <div class="avtar avtar-xs bg-light-secondary">
+              <i class="ti ti-heading f-20"></i>
+            </div>
+          </div>
+          <div class="flex-grow-1 ms-3">
+            <h5 class="mb-1"><b>Pelaksana Kegiatan</b></h5>
             <p class="pc-event-title text-muted"></p>
           </div>
         </div>
@@ -54,7 +102,7 @@
             </div>
           </div>
           <div class="flex-grow-1 ms-3">
-            <h5 class="mb-1"><b>Venue</b></h5>
+            <h5 class="mb-1"><b>Kelengkapan Pelaksanaan</b></h5>
             <p class="pc-event-venue text-muted"></p>
           </div>
         </div>
@@ -66,7 +114,7 @@
             </div>
           </div>
           <div class="flex-grow-1 ms-3">
-            <h5 class="mb-1"><b>Date</b></h5>
+            <h5 class="mb-1"><b>Berkas Pelaksanaan</b></h5>
             <p class="pc-event-date text-muted"></p>
           </div>
         </div>
@@ -78,7 +126,7 @@
             </div>
           </div>
           <div class="flex-grow-1 ms-3">
-            <h5 class="mb-1"><b>Description</b></h5>
+            <h5 class="mb-1"><b>Catatan</b></h5>
             <p class="pc-event-description text-muted"></p>
           </div>
         </div>
@@ -110,7 +158,7 @@
 <div class="offcanvas offcanvas-end cal-event-offcanvas" tabindex="-1" id="calendar-add_edit_event">
   
   <div class="offcanvas-header">
-    <h3 class="f-w-600 text-truncate">Add Events</h3>
+    <h3 class="f-w-600 text-truncate">Tambah Kegiatan</h3>
     <a href="#" class="avtar avtar-s btn-link-danger btn-pc-default" data-bs-dismiss="offcanvas">
       <i class="ti ti-x f-20"></i>
     </a>
@@ -119,60 +167,57 @@
   <div class="offcanvas-body">
     <form id="pc-form-event" novalidate>
 
-      <div class="form-group">
-        <label class="form-label">Nama Kegiatan</label>
-        <input type="text   " class="form-control" id="pc-e-title" placeholder="Masukkan Nama Kegiatan" autofocus>
-      </div>
+    <div class="form-group">
+  <label class="form-label">Nama Kegiatan</label>
+  <input type="text" class="form-control" id="pc-e-title" placeholder="Masukkan Nama Kegiatan" autofocus>
+</div>
 
-      <div class="form-group">
-        <label class="form-label">Jenis Kegiatan</label>
-        <select class="form-select" id="pc-e-type">
-          <option value="empty" selected>dl</option>
-          <option value="event-primary">Akbar</option>
-          <option value="event-secondary">Tentatif</option>
-        </select>
-      </div>
+<div class="form-group">
+  <label class="form-label">Jenis Kegiatan</label>
+  <select class="form-select" id="pc-e-type">
+    <option value="empty" selected>Pilih Jenis Kegiatan</option>
+    <option value="event-warning">dl</option>
+    <option value="event-primary">Akbar</option>
+    <option value="event-secondary">Tentatif</option>
+  </select>
+</div>
 
-      <div class="form-group m-0">
-        <input type="hidden" class="form-control" id="pc-e-sdate">
-        <input type="hidden" class="form-control" id="pc-e-edate">
-      </div>
+<div class="form-group m-0">
+  <input type="hidden" class="form-control" id="pc-e-sdate">
+  <input type="hidden" class="form-control" id="pc-e-edate">
+</div>
 
-      <div class="form-group">
-        <label class="form-label">Tanggal Pelaksanaan</label>
-        <input type="text" class="form-control @error('tgl_survey') is-invalid @enderror" placeholder="isi tanggal" name="tgl_survey" id="pc-datepicker-1" value="{{ old('tgl_survey') }}">
-      </div>
 
-      <div class="form-group">
-            <label class="form-label">Tempat Pelaksanaan</label>
-            <input type="text" class="form-control" placeholder="Masukkan Tempat Pelaksanaan" id="pc-e-location">
-        </div>
+<div class="form-group">
+  <label class="form-label">Tempat Pelaksanaan</label>
+  <input type="text" class="form-control" placeholder="Masukkan Tempat Pelaksanaan" id="pc-e-venue">
+</div>
 
-        <div class="form-group">
-            <label class="form-label">Pelaksana Kegiatan</label>
-            <input type="text" class="form-control" placeholder="Masukkan Pelaksana Kegiatan" id="pc-e-organizer">
-        </div>
+<div class="form-group">
+  <label class="form-label">Pelaksana Kegiatan</label>
+  <input type="text" class="form-control" placeholder="Masukkan Pelaksana Kegiatan" id="pc-e-organizer">
+</div>
 
-        <div class="form-group">
-            <label class="form-label">Kelengkapan Pelaksanaan</label>
-            <input type="text" class="form-control" placeholder="Masukkan Kelengkapan Pelaksanaan" id="pc-e-equipment">
-        </div>
+<div class="form-group">
+  <label class="form-label">Kelengkapan Pelaksanaan</label>
+  <input type="text" class="form-control" placeholder="Masukkan Kelengkapan Pelaksanaan" id="pc-e-equipment">
+</div>
 
-        <div class="form-group">
-            <label class="form-label">Berkas Pelaksanaan</label>
-            <input type="text" class="form-control" placeholder="Masukkan Berkas Pelaksanaan" id="pc-e-documents">
-        </div>
+<div class="form-group">
+  <label class="form-label">Berkas Pelaksanaan</label>
+  <input type="text" class="form-control" placeholder="Masukkan Berkas Pelaksanaan" id="pc-e-documents">
+</div>
 
-        <div class="form-group">
-            <label class="form-label">Catatan</label>
-            <textarea class="form-control" placeholder="Masukkan Catatan" rows="6" id="pc-e-notes"></textarea>
-        </div>
+<<div class="form-group">
+  <label class="form-label">Catatan</label>
+  <textarea class="form-control" placeholder="Masukkan Catatan" rows="6" id="pc-e-description"></textarea>
+</div>
      
       <div class="row justify-content-between">
         <div class="col-auto"><button type="button" class="btn btn-link-danger btn-pc-default" data-bs-dismiss="offcanvas"><i class="align-text-bottom me-1 ti ti-circle-x"></i> Close</button></div>
         <div class="col-auto">
           <button id="pc_event_add" type="button" class="btn btn-secondary" data-pc-action="add">
-            <span id="pc-e-btn-text"><i class="align-text-bottom me-1 ti ti-calendar-plus"></i> Add</span>
+            <span id="pc-e-btn-text"><i class="align-text-bottom me-1 ti ti-calendar-plus"></i> Tambah</span>
           </button>
         </div>
       </div>
@@ -180,18 +225,17 @@
   </div>
 </div>
 
-
 @endsection
 
 @section('scripts')
 <!-- [Page Specific JS] start -->
- <script>
-        (function() {
-        const d_week = new Datepicker(document.querySelector('#pc-datepicker-1'), {
-          buttonClass: 'btn'
-        });
-      })();
-    </script>
+<script>
+  (function() {
+    const d_week = new Datepicker(document.querySelector('#pc-datepicker-1'), {
+      buttonClass: 'btn'
+    });
+  })();
+</script>
 <!-- calender js -->
 <script src="{{ URL::asset('build/js/plugins/index.global.min.js') }}"></script>
 <!-- Sweet Alert -->
