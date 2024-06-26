@@ -55,7 +55,7 @@
           </div>
           <div class="flex-grow-1 ms-3">
             <h5 class="mb-1"><b>Jenis Kegiatan</b></h5>
-            <p class="pc-event-title text-muted"></p>
+            <p class="pc-event-kegiatan text-muted"></p>
           </div>
         </div>
 
