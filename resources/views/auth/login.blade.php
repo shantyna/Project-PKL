@@ -9,14 +9,14 @@
                 <div class="text-center">
                     <h4>KANTOR WILAYAH</h4> <h4>KEMENKUMHAM</h4>
                     <img src="{{ URL::asset('image/kemenkumham.png') }}" alt="images"  class="img-fluid w-25 mb-3">
-                    <h4 class="f-w-500 mb-1">Login Pesera</h4>
+                    <h4 class="f-w-500 mb-1">Login Peserta</h4>
                     <p class="mb-3">Tidak Punya Akun? <a href="{{ route('register') }}"
                             class="link-primary ms-1">Buat Akun</a></p>
                 </div>
                 <form method="POST" action="{{ route('login') }}">
                     @csrf
                     <div class="form-group mb-3">
-                        <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="admin@phoenixcoded.com" required autocomplete="email" autofocus id="floatingInput" placeholder="Masukkan Username">
+                        <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="santi@gmail.com" required autocomplete="email" autofocus id="floatingInput" placeholder="Masukkan Username">
                         @error('email')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>

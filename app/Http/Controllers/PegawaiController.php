@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pegawai;
 use Illuminate\Http\Request;
+
+use RealRashid\SweetAlert\Facades\Alert;
+
 
 class PegawaiController extends Controller
 {
@@ -11,7 +15,11 @@ class PegawaiController extends Controller
      */
     public function index()
     {
-        //
+        return view('pegawai.index');
+    }
+
+    public function penjadwalan() {
+        return view ('pegawai.penjadwalan');
     }
 
     /**
@@ -19,7 +27,10 @@ class PegawaiController extends Controller
      */
     public function create()
     {
-        return view('pegawai.lihat_pegawai');
+        $data = Pegawai::all();
+
+        return view('pegawai.input_pegawai');
+        
     }
 
     /**
@@ -27,7 +38,30 @@ class PegawaiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = new Pegawai;
+
+        $request->validate([
+            'nip' => 'required|integer|unique:pegawais',
+            'nama_pegawai' => 'required|string|max:255',
+            'jabatan' => 'required|string|max:255',
+        ]);
+
+        // Membuat instance User baru
+        $data = new Pegawai();
+
+        // Menyimpan data yang telah divalidasi
+        $data->nip = $request->nip;
+        $data->nama_pegawai = $request->nama_pegawai;
+        $data->jabatan = $request->jabatan;
+
+        // Menyimpan data ke database
+        $data->save();
+
+        // Menampilkan notifikasi sukses
+        Alert::success('Sukses', 'Data Berhasil Ditambahkan');
+
+        // Mengarahkan kembali ke halaman sebelumnya
+        return redirect()->back();
     }
 
     /**
@@ -57,8 +91,12 @@ class PegawaiController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy($id)
     {
-        //
+        $data = Pegawai::find($id);
+
+        $data -> delete();
+        
+        return redirect()->back();
     }
 }

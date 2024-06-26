@@ -207,7 +207,7 @@
                     </div>
                 </li>
                 <div class="mt-3">
-                <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Admin</button>
+                <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">User</button>
                     <div class="dropdown-menu">
                         <!-- <a class="dropdown-item" href="#!">Action</a>
                         <a class="dropdown-item" href="#!">Another action</a> -->
@@ -226,14 +226,6 @@
                                         </form>                                   
                       </div>
                  </div>
-                                       
-                               
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            </ul>
         </div>
     </div>
 </header>
