@@ -133,7 +133,23 @@
 
                 </div>
 
-                
+                <div class="modal-footer justify-content-between">
+                    <ul class="list-inline me-auto mb-0">
+                        <li class="list-inline-item align-bottom">
+                            <a href="#" id="pc_event_remove"
+                                class="avtar avtar-s btn-link-danger btn-pc-default w-sm-auto" data-bs-toggle="tooltip"
+                                title="Delete">
+                                <i class="ti ti-trash f-18"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item align-bottom">
+                            <a href="#" id="pc_event_edit" class="avtar avtar-s btn-link-success btn-pc-default"
+                                data-bs-toggle="tooltip" title="Edit">
+                                <i class="ti ti-edit-circle f-18"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="flex-grow-1 text-end">
                         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>

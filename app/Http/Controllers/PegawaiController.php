@@ -19,6 +19,7 @@ class PegawaiController extends Controller
     }
 
     public function penjadwalan() {
+        
         return view ('pegawai.penjadwalan');
     }
 
