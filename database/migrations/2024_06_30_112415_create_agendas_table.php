@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('berkas_kegiatan');
             $table->string('catatan');
             $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->string('status')->default('ditunda');
             $table->timestamps();
         });
     }

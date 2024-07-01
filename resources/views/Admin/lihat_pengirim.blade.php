@@ -29,6 +29,7 @@
     @include('layouts.sidebar')
     @include('layouts.topbar')
 
+   
     <!-- [ Main Content ] start -->
     <div class="pc-container">
         <div class="pc-content">
@@ -51,6 +52,7 @@
                       <tr>
                         <th>No</th>
                         <th>Nama</th>
+                        <th>Nama Kegiatan</th>
                         <th>Jenis Kegiatan</th>
                         <th>Tanggal Pelaksanaan</th>
                         <th>Status</th>
@@ -58,22 +60,30 @@
                       </tr>
                     </thead>
                     <tbody>
+                     
                       @php $nomor = 1; @endphp
-                      @foreach ($data as $pengirim)
+                      @foreach ($agenda as $agenda)
+                      <form action="{{ url('/update_status', $agenda->id) }}" method="POST">
+                        @csrf
+                        @method('PUT') <!-- Jika menggunakan metode PUT atau PATCH -->
                       <tr>
                          <td>{{ $nomor++ }}</td>
-                        <td>{{ $pengirim->nama }}</td>
-                        <td>{{ $pengirim->jenis_kegiatan }}</td>
-                        <td>{{ $pengirim->tanggal_pelaksanaan }}</td>
-                        <td><button type="button" class="btn btn-light-danger">{{ $pengirim->status }}</button></td>
+                        <td>{{ $agenda->user->name }}</td>
+                        <td>{{ $agenda->nama_kegiatan }}</td>
+                        <td>{{ $agenda->jenis_kegiatan }}</td>
+                        <td>{{ \Carbon\Carbon::parse($agenda->start_date)->locale('id')->translatedFormat('d F Y') }} - {{ \Carbon\Carbon::parse($agenda->end_date)->locale('id')->translatedFormat('d F Y') }}</td>
+                        <td>{{ $agenda->status }}</td>
+                      
                         <td>
-                        <button type="button"  class="btn btn-light-primary">Setuju</button>
-                        <button type="button"  class="btn btn-light-secondary">Tolak</button>
-                        <a href="{{ url('hapus_pengirim', $pengirim->id) }}" class="btn btn-danger" onclick="confirmation(event)">Hapus</a>
+                        <button type="submit" name="status" value="Setuju"  class="btn btn-light-primary">Setuju</button>
+                        <button type="submit" name="status" value="Tolak" class="btn btn-light-primary">Tolak</button>
+                        <a href="{{ url('hapus_pengirim', $agenda->id) }}" class="btn btn-danger" onclick="confirmation(event)">Hapus</a>
 
                         </td>
                       </tr>
+                    </form>
                       @endforeach
+
                      
                     </tbody>
                    

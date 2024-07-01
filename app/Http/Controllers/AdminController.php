@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 
-use App\Models\User;
+use App\Models\Agenda;
 use App\Models\Pegawai;
-use App\Models\Pengirim;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -31,19 +30,39 @@ class AdminController extends Controller
      */
     public function lihat_pengirim () {
 
-        $data = Pengirim::all();
+        $agenda = Agenda::all();
 
-        return view('admin.lihat_pengirim', compact('data'));
+
+        return view('admin.lihat_pengirim', compact('agenda'));
     }
 
     public function hapus_pengirim($id)
     {
-        $data = Pengirim::find($id);
+        $event = Agenda::find($id);
 
-        $data -> delete();
+        $event->delete();
         
+                // Tampilkan alert menggunakan SweetAlert
+                Alert::success('Sukses', 'Event berhasil dihapus');
+
         return redirect()->back();
     }
+
+
+    public function update_status(Request $request, $id) {
+        // Cari agenda berdasarkan id
+        $agenda = Agenda::findOrFail($id);
+            
+        // Update status
+        $agenda->status = $request->input('status');
+        $agenda->save();
+    
+        // Berikan notifikasi sukses
+        Alert::success('Sukses', 'Status Telah Diperbarui');
+    
+        return redirect()->back();
+    }
+    
 
     public function lihat_pegawai() {
         $data = Pegawai::all();
